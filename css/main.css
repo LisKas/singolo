@@ -73,8 +73,40 @@ header{
 	background-color: #2d303a;
 	border-bottom: 6px solid #323746;
 }
+.navbar-right {
+
+	animation-name: slideInLeft;
+	animation-duration: 3s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .navbar-brand>h1>span {
 	color: #f06c64;
+}
+
+.navbar-brand {
+	animation-name: slideInRight;
+	animation-duration: 3s;
+}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .navbar-default {
@@ -153,8 +185,47 @@ h1:focus {
 	padding-right: 15px;
 	padding-bottom: 37px;
 }
+.servises-item p:hover{
+	font-size: 14px;
+}
+.icon-facebook:hover{
+	background-color: #afb0c5;
+}
+.icon-gplus:hover{
+	background-color: #afb0c5;
+}
+.icon-twitter:hover{
+	background-color: #afb0c5;
+}
+.icon-linkedin:hover{
+	background-color: #afb0c5;
+}
+/*////////////////////////////////////////////////*/
+.animate:hover{
+	animation-name: tada;
+	animation-duration: 2s;
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
 
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
 
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
 /*//////////////////////////////////////////////////////*/
 .portfolio{
 	background-color: #2d303a;
